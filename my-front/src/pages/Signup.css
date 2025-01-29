@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  width: 30rem; /* Default width for large screens */
+  max-width: 50rem; /* Limit max width */
+  height: 40rem; /* Fixed height */
+  padding: 10px 20px; /* Maintain consistent padding */
+  background-color: #fff;
+  border: 2px solid #2575fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  min-height: 1.2rem;
+  display: flex;
+  overflow-wrap: break-word;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2575fc;
+  font-size: 2rem;
+  margin-top: 5px;
+}
+
+.already {
+  margin-top: -5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #6696f6;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6696f6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5b85f0;
+}
+
+p {
+  text-align: center;
+}
+
+/* Media query for smaller screens (tablets and below) */
+@media (max-width: 768px) {
+  .signup-container {
+    width: 90%; /* Expand width to fill most of the screen */
+    max-width: none; /* Remove fixed max width */
+    padding: 15px;
+    height: auto; /* Allow dynamic height for smaller screens */
+  }
+
+  .signup-form h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .btn {
+    font-size: 14px; /* Adjust button font size */
+    padding: 10px;
+  }
+}
+
+/* Media query for extra small screens (mobile) */
+@media (max-width: 480px) {
+  .signup-container {
+    width: 95%; /* Occupy more width for mobile screens */
+    padding: 10px;
+    border: 1px solid #ddd; /* Simplify the design */
+    box-shadow: none; /* Remove shadow for simplicity */
+  }
+
+  .signup-form h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .form-group input {
+    padding: 10px;
+  }
+}
+
+/* Media query for very large screens */
+@media (min-width: 1200px) {
+  .signup-container {
+    width: 30rem; /* Maintain small width for large screens */
+    max-width: 50rem;
+    height: 40rem;
+  }
+}

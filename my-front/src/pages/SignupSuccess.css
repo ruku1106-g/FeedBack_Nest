@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Soft background color to reflect success */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.root{
+  align-items: center;
+}
+
+.success-container {
+  width: 90%; /* Start with a flexible width for smaller screens */
+  max-width: 40rem; /* Restrict max width for larger screens */
+  height: auto; /* Allow height to adjust dynamically */
+  padding: 20px; /* Ensure padding is uniform across devices */
+  background-color: #fff;
+  border: 2px solid #2575fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centered content */
+  align-items: center;
+  overflow-y: auto; /* Allow scrolling for overflow */
+  box-sizing: border-box; /* Includes padding and border in width/height */
+}
+
+.success-message {
+  text-align: center;
+  font-size: 1.2rem; /* Slightly smaller font for better readability */
+  color: #000000;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.success-container h2 {
+  text-align: center;
+  color: #2575fc;
+  font-size: 1.8rem;
+  margin-top: 5px;
+}
+
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6696f6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5b85f0;
+}
+
+p {
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+}
+
+p a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For small screens (phones) */
+@media (max-width: 600px) {
+  .success-container {
+      width: 95%; /* Take up almost the full width */
+      padding: 15px;
+  }
+
+  .success-message {
+      font-size: 1rem; /* Adjust text size for small screens */
+  }
+
+  .success-container h2 {
+      font-size: 1.5rem; /* Reduce heading size */
+  }
+
+  .btn {
+      font-size: 14px; /* Slightly smaller button text */
+      padding: 10px;
+  }
+}
+
+/* For large screens (desktops) */
+@media (min-width: 1200px) {
+  .success-container {
+      max-width: 50rem; /* Make the container wider for larger screens */
+  }
+
+  .success-message {
+      font-size: 1.5rem; /* Larger text for readability */
+  }
+
+  .success-container h2 {
+      font-size: 2rem; /* Larger heading size */
+  }
+}

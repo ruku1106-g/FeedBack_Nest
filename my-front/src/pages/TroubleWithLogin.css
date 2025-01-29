@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.trouble-container {
+  width: 90%; /* Flexible width for smaller screens */
+  max-width: 40rem; /* Restrict maximum width */
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #2575fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.trouble-container h2 {
+  text-align: center;
+  color: #2575fc;
+  font-size: 1.8rem; /* Adjusted for smaller screens */
+  margin-top: 0;
+}
+
+.trouble-container p {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.trouble-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #6696f6;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6696f6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5b85f0;
+}
+
+.create-account-link, .back-to-login-link {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.create-account-link:hover, .back-to-login-link:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For small screens (phones) */
+@media (max-width: 600px) {
+  .trouble-container {
+      width: 95%; /* Expand to almost full screen */
+      padding: 15px;
+  }
+
+  .trouble-container h2 {
+      font-size: 1.5rem; /* Smaller headings */
+  }
+
+  .trouble-container p {
+      font-size: 0.9rem; /* Reduce paragraph font size */
+  }
+
+  .btn {
+      font-size: 14px; /* Smaller button text */
+      padding: 10px;
+  }
+}
+
+/* For large screens (desktops) */
+@media (min-width: 1200px) {
+  .trouble-container {
+      max-width: 50rem; /* Wider container */
+      padding: 25px; /* Extra padding for a balanced look */
+  }
+
+  .trouble-container h2 {
+      font-size: 2rem; /* Bigger heading for clarity */
+  }
+
+  .btn {
+      font-size: 18px; /* Larger button text */
+      padding: 14px;
+  }
+}
